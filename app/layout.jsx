@@ -1,5 +1,9 @@
 import "@/assets/styles/globals.css";
-import React from "react";
+export const metadata = {
+  title: "Property Pulse",
+  keywords: "rental, property",
+  description: "Find the perfect rental property",
+};
 
 const Mainlayout = ({ children }) => {
   return (
