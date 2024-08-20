@@ -1,12 +1,12 @@
 import PropertyCard from "@/components/PropertyCard";
-//import Pagination from "@/components/Pagination";
-import properties from "@/properties.json";
 
-// NOTE: This has been changed to a server component and now receives props from
-// the page parent so no need to make a fetch request to an API route handler.
+import connectDB from "@/cofig/database";
+import Property from "@/models/Property";
 
-//const Properties = ({ properties, total, page, pageSize }) => {
-const Properties = () => {
+const Properties = async () => {
+  await connectDB();
+  const properties = await Property.find({}).lean();
+
   return (
     <section className="px-4 py-6">
       <div className="container-xl lg:container m-auto px-4 py-6">
@@ -19,7 +19,6 @@ const Properties = () => {
             ))}
           </div>
         )}
-        {/*<Pagination page={page} pageSize={pageSize} totalItems={total} />*/}
       </div>
     </section>
   );
