@@ -1,4 +1,4 @@
-import connectDB from "@/cofig/database";
+import connectDB from "@/config/database";
 import Property from "@/models/Property";
 import PropertyCard from "./PropertyCard";
 import Link from "next/link";
