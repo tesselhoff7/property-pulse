@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 //import { toast } from 'react-toastify';
-//import deleteProperty from '@/app/actions/deleteProperty';
+import deleteProperty from "@/app/actions/deleteProperty";
 
 function ProfileProperties({ properties: initialProperties }) {
   const [properties, setProperties] = useState(initialProperties);
@@ -54,7 +54,7 @@ function ProfileProperties({ properties: initialProperties }) {
           Edit
         </Link>
         <button
-          //onClick={() => handleDeleteProperty(property._id)}
+          onClick={() => handleDeleteProperty(property._id)}
           className="bg-red-500 text-white px-3 py-2 rounded-md hover:bg-red-600"
           type="button"
         >
