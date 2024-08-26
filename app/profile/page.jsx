@@ -4,6 +4,7 @@ import connectDB from "@/config/database";
 import Property from "@/models/Property";
 import { getSessionUser } from "@/utils/getSessionUser";
 import ProfileProperties from "@/components/ProfileProperties";
+import { convertToSerializeableObject } from "@/utils/convertToObject";
 
 const Profile = async () => {
   await connectDB();
@@ -16,7 +17,9 @@ const Profile = async () => {
     throw new Error("userId is required");
   }
 
-  const properties = await Property.find({ owner: userId }).lean();
+  const propertiesDocs = await Property.find({ owner: userId }).lean();
+
+  const properties = propertiesDocs.map(convertToSerializeableObject);
 
   return (
     <section className="bg-blue-50">
