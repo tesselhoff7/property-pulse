@@ -9,6 +9,8 @@ import {
 import PropertyMap from "./PropertyMap";
 
 const PropertyDetails = ({ property }) => {
+  console.log("PROPERTY");
+  console.log(property.location);
   return (
     <main>
       <div className="bg-white p-6 rounded-lg shadow-md text-center md:text-left">
@@ -92,7 +94,7 @@ const PropertyDetails = ({ property }) => {
       </div>
       {/* <!-- Map --> */}
       <div className="bg-white p-6 rounded-lg shadow-md mt-6">
-        <PropertyMap />
+        <PropertyMap property={property} />
       </div>
     </main>
   );
