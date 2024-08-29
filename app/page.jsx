@@ -9,9 +9,9 @@ const HomePage = () => {
 
   return (
     <>
+      <Hero />
       <InfoBoxes />
       <HomeProperties />
-      <Hero />
     </>
   );
 };
