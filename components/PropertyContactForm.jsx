@@ -50,7 +50,6 @@ const PropertyContactForm = ({ property }) => {
         </p>
       ) : (
         <form action={formAction}>
-          {/* NOTE: Here we have two hidden inputs to add the property id and the owner to our FormData submission */}
           <input
             type="hidden"
             id="property"
