@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -8,7 +8,7 @@ import {
   TwitterIcon,
   WhatsappIcon,
   EmailIcon,
-} from "react-share";
+} from 'react-share';
 
 const ShareButtons = ({ property, PUBLIC_DOMAIN }) => {
   // NOTE: here we receive a prop from our parent page component which is
@@ -19,14 +19,14 @@ const ShareButtons = ({ property, PUBLIC_DOMAIN }) => {
 
   return (
     <>
-      <h3 className="text-xl font-bold text-center pt-2">
+      <h3 className='text-xl font-bold text-center pt-2'>
         Share This Property:
       </h3>
-      <div className="flex gap-3 justify-center pb-5">
+      <div className='flex gap-3 justify-center pb-5'>
         <FacebookShareButton
           url={shareUrl}
           quote={property.name}
-          hashtag={`#${property.type.replace(/\s/g, "")}ForRent`}
+          hashtag={`#${property.type.replace(/\s/g, '')}ForRent`}
         >
           <FacebookIcon size={40} round={true} />
         </FacebookShareButton>
@@ -34,7 +34,7 @@ const ShareButtons = ({ property, PUBLIC_DOMAIN }) => {
         <TwitterShareButton
           url={shareUrl}
           title={property.name}
-          hashtags={[`${property.type.replace(/\s/g, "")}ForRent`]}
+          hashtags={[`${property.type.replace(/\s/g, '')}ForRent`]}
         >
           <TwitterIcon size={40} round={true} />
         </TwitterShareButton>
@@ -42,7 +42,7 @@ const ShareButtons = ({ property, PUBLIC_DOMAIN }) => {
         <WhatsappShareButton
           url={shareUrl}
           title={property.name}
-          separator=":: "
+          separator=':: '
         >
           <WhatsappIcon size={40} round={true} />
         </WhatsappShareButton>
